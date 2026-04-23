@@ -1,0 +1,89 @@
+/* LIMPAR FORMATAÇÃO */
+
+*{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+/* GENERICOS */
+
+/*
+CORES 
+PRIMARIA : #6200EE
+PRIMARIA-VARIANTE: #3700B3
+SECUNDARIA: #03DAC5
+TEXTO LINKS: #00A393
+*/
+
+body{
+    font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #b6b6b6;
+    height: 100%;
+}
+
+h3{
+    margin-bottom: 10px;
+}
+
+/* HEADER */
+
+header{
+    background: no-repeat center/100% url("../Images/computação.png");
+    width: 100%;
+    height: 600px;
+}
+
+header .header-content{
+    padding: 25px 15px;
+    text-align: center;
+}
+
+header h1{
+    color: white;
+}
+
+/* CONTENT */
+
+.content{
+    margin: 25px auto;
+    width: 1000px;
+}
+
+.content-text{
+    width: 685px;
+    float: left;
+    background-color: #FFFFFF;
+    text-align: justify;
+    padding: 15px;
+}
+
+.content-text h3{
+    border-bottom: 1px solid #C4C4C4;
+}
+
+/* RIGHT SIDE */
+
+.content-right{
+    width: 245px;
+    float: right;
+    padding: 10px;
+    background-color: #FFFFFF;
+}
+
+.content-right h3{
+    background-color: #CCCCCC;
+    color: #565656;
+    padding: 5px;
+}
+
+/* LINKS */
+a{
+    color: #00A393;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
