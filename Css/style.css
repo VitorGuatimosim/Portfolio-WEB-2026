@@ -3,7 +3,6 @@
 *{
     padding: 0;
     margin: 0;
-    /* box-sizing: border-box; */
 }
 
 /* GENERICOS */
@@ -19,7 +18,7 @@ TEXTO LINKS: #00A393
 body{
     font-size: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #b6b6b6;
+    background-color: #F0F0F0;
     height: 100%;
 }
 
@@ -47,7 +46,7 @@ header h1{
 /* CONTENT */
 
 .content{
-    margin: 25px auto;
+    margin: 0 auto;
     width: 1000px;
 }
 
@@ -57,10 +56,31 @@ header h1{
     background-color: #FFFFFF;
     text-align: justify;
     padding: 15px;
+    line-height: 1.6;
+    margin: 20px 0;    
 }
 
-.content-text h3{
+.content-text div{
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 25px;
+}
+
+.content-text h1{
+    text-align: center;
+}
+
+.content-text h1{
     border-bottom: 1px solid #C4C4C4;
+}
+
+.content-text p{
+    text-align: justify;
+}
+
+.content-text ul li{
+    margin-left: 25px;
+    list-style: circle;
 }
 
 /* RIGHT SIDE */
@@ -68,12 +88,21 @@ header h1{
 .content-right{
     width: 245px;
     float: right;
+    margin: 20px 0;    
+}
+
+.content-right .nav-rapida{
     padding: 10px;
+    margin-bottom: 20px;
     background-color: #FFFFFF;
 }
 
+.content-right .nav-rapida a{
+    line-height: 1.6;
+}
+
 .content-right h3{
-    background-color: #CCCCCC;
+    background-color: #F0F0F0;
     color: #565656;
     padding: 5px;
 }
