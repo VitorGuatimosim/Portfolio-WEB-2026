@@ -5,61 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio WEB</title>
 
-    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/style.css">    
+    <script src="Js/script.js"></script>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h1>Portfolio WEB 2026</h1>
-            <h1>VITOR MESSAGI GUATIMOSIM</h1>
-        </div>
-
-    </header>
-
-    <div class="content">
-        <div class="content-text">
-            <h1>Formação</h1>
-            <div>
-                <br><h3>Formação Academica</h3>
+            <div class="navbar">
                 <ul>
-                    <li><p>Ensino Médio Integrado Técnico em informática – Completo (Fev2017 – Abr 2021);</p></li>
-                    <li><p>Instituto Federal do Rio Grande do Sul – Campus Osório (IFRS);</p></li>
-                    <li><p>Técnico em Desenvolvimento de Sistemas EAD, SENAC-RS (Jun2022 – Mar2024, 1200 horas);</p></li>
-                    <li><p>Bacharelado em Ciência da Computação – Incompleto(Jun2024 – Jun2028) UNINTER;</p></li>
-                </ul>
-
-                <br><h3>Conhecimentos</h3>
-                <ul>
-                    <li><p>Português – falante nativo;</p></li>
-                    <li><p>Inglês – Leitura (intermediária), Escuta/Fala (iniciante);</p></li>
-                    <li><p>Pacote Office e LibreOffice, Word, Excel, Outlook entre outros;</p></li>
-                    <li><p>Conhecimento Básico de Linux Ubuntu, SSH;</p></li>
-                </ul>
-
-                <br><h3>Cursos Extras</h3>
-                <ul>
-                    <li><p>CC50: Introdução à Ciência da Computação – O Curso de Harvard, no Brasil. (70 horas)</p></li>
+                    <li class="dropdown">
+                        <a href="index.html">Página Inicial</a>
+                        <div class="dropdown-content">
+                            <a href="index.html#sobre-mim-text">Sobre Mim</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="formacao.html">Formação</a>
+                        <div class="dropdown-content">
+                            <a href="formacao.html#formacao-text">Formação Acadêmica</a>
+                            <a href="formacao.html#conhecimentos-text">Conhecimentos</a>
+                            <a href="formacao.html#curso-extra-text">Cursos Extras</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="portfolio.html">Portfólio</a>
+                        <div class="dropdown-content">
+                            <a href="portfolio.html#web-text">Desenvolvimento WEB</a>
+                            <a href="portfolio.html#arduino-text">Arduino</a>
+                            <a href="portfolio.html#java-text">Desenvolvimento Java</a>
+                            <a href="portfolio.html#python-text">Desenvolvimento Pyhton</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="contato.html">Contato</a>
+                        <div class="dropdown-content">
+                            <a href="contato.html#form-text">Mande Mensagem</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
+    </header>
 
-        <div class="content-right">
-            <div class="nav-rapida">
-                <h3>Navegação Rápida</h3>
-                <a href="index.html">Página Inicial</a><br>
-                <a href="formacao.html">Formação</a><br>
-                <a href="portfolio.html">Portfólio</a><br>
-                <a href="contato.html">Contato</a><br>
-            </div>            
-        </div>       
-        
-        <div class="content-right">
-            <div class="nav-rapida">
-                <h3>Links de Contato</h3>
-                <a href="https://github.com/VitorGuatimosim">GitHub</a><br>
-                <a href="https://www.linkedin.com/in/vitor-messagi-guatimosim/">Linkedin</a><br>
-            </div>            
+    <div class="volta-topo">
+        <a href="#topo" id="botao-volta"><img src="Images/Icons/seta-semfundo.png" title="Voltar ao Topo" id="volta-img"></a>
+    </div>
+
+    <div class="page-wrapper">
+        <div class="content">
+            <div class="content-text">
+                <h1>Formação</h1>
+                <div>
+                    <br><h3 id="formacao-text">Formação Academica</h3>
+                    <ul>
+                        <li><p>Ensino Médio Integrado Técnico em informática – Completo (Fev2017 – Abr 2021) Instituto Federal do Rio Grande do Sul – Campus Osório (IFRS);</p></li>
+                        <li><p>Técnico em Desenvolvimento de Sistemas EAD, SENAC-RS (Jun2022 – Mar2024, 1200 horas);</p></li>
+                        <li><p>Bacharelado em Ciência da Computação – Incompleto(Jun2024 – Jun2028) UNINTER;</p></li>
+                    </ul>
+
+                    <br><h3 id="conhecimentos-text">Conhecimentos</h3>
+                    <ul>
+                        <li><p>Português – falante nativo;</p></li>
+                        <li><p>Inglês – Leitura (intermediária), Escuta/Fala (iniciante);</p></li>
+                        <li><p>Pacote Office e LibreOffice, Word, Excel, Outlook entre outros;</p></li>
+                        <li><p>Conhecimento Básico de Linux Ubuntu, SSH;</p></li>
+                    </ul>
+
+                    <br><h3 id="curso-extra-text">Cursos Extras</h3>
+                    <ul>
+                        <li><p>CC50: Introdução à Ciência da Computação – O Curso de Harvard, no Brasil. (70 horas)</p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-right">
+                <div class="nav-rapida">
+                    <div><img src="Images/Icons/icon-navegacao.gif" class="icon-social"><h3>Navegação Rápida</h3></div>
+                    <a href="index.html">Página Inicial</a><br>
+                    <a href="formacao.html">Formação</a><br>
+                    <a href="portfolio.html">Portfólio</a><br>
+                    <a href="contato.html">Contato</a><br>
+                </div>            
+            </div>       
+            
+            <div class="content-right">
+                <div class="nav-rapida">
+                    <div><img src="Images/Icons/social-media.gif" class="icon-social"> <h3>Links de Contato</h3> </div>
+                    <a href="https://github.com/VitorGuatimosim">GitHub</a><br>
+                    <a href="https://www.linkedin.com/in/vitor-messagi-guatimosim/">Linkedin</a><br>
+                </div>            
+            </div>
         </div>
-    </div>    
+    </div>
+    
+    <footer>
+        <p>&copy; VITOR MESSAGI GUATIMOSIM - 2026</p>
+    </footer>
 </body>
 </html>

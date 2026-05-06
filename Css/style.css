@@ -2,7 +2,9 @@
 
 *{
     padding: 0;
-    margin: 0;
+    margin: 0;    
+    box-sizing: border-box;    
+    word-wrap: break-word;
 }
 
 /* GENERICOS */
@@ -13,13 +15,17 @@ PRIMARIA : #6200EE
 PRIMARIA-VARIANTE: #3700B3
 SECUNDARIA: #03DAC5
 TEXTO LINKS: #00A393
+
+NOVO
+BACKGROUND-COLOR FOOTER: #002E62
+NAVBAR COLOR: #AE56E6
+TEXTO LINKS: #AE56E6
 */
 
-body{
+html, body{
     font-size: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #F0F0F0;
-    height: 100%;
 }
 
 .content-text .img-legenda .legenda{
@@ -34,25 +40,100 @@ h3{
 /* HEADER */
 
 header{
-    background: no-repeat center/100% url("../Images/header_computação.png");
+    background: no-repeat center/100% url("../Images/header-computação.png");
     width: 100%;
     height: 600px;
+    position: relative;
+    top: 0px;
 }
 
-header .header-content{
-    padding: 25px 15px;
-    text-align: center;
+header .header-content .header-titulo{
+    position: absolute;
+    top: 150px;
+    left: 28%;
 }
 
-header h1{
+header .header-content h1{
+    text-align: center;    
+    font-size: 60px;
     color: white;
+}
+
+/* HEADER MENU */
+
+.navbar{
+    position: absolute;    
+    background-color: rgba(0,46,98,0.2);
+    width: 100%;
+    bottom: 0;
+}
+
+.navbar ul{
+    list-style-type: none;
+}
+
+.navbar ul li{
+    float: left;
+    border-right: 1px solid #BBBBBB;
+}
+
+.navbar ul li:last-child{
+    border-right: none;
+}
+
+.navbar ul li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+}
+
+.navbar ul li a:active{
+    background-color: #803fa8;
+}
+
+.navbar a:hover, .dropdown:hover{
+    background-color: #AE56E6;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.navbar ul li .dropdown-content a{
+    float: none;
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.navbar ul li .dropdown-content a:hover{    
+    background-color: #AE56E6;
+    color: #FFFFFF;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
 }
 
 /* CONTENT */
 
+.page-wrapper{
+    margin-bottom: 125px;
+}
+
 .content{
     margin: 0 auto;
-    width: 1150px;
+    width: 1150px; 
+    overflow: auto;
 }
 
 .content-text{
@@ -62,6 +143,7 @@ header h1{
     text-align: justify;
     padding: 15px;
     line-height: 1.6;
+    padding-bottom:50px;
     margin: 20px 0;    
 }
 
@@ -70,6 +152,7 @@ header h1{
     height: auto;
     display: block;
     margin: 0 auto;
+    border-radius: 20px;
 }
 
 .content-text .img-legenda{
@@ -113,21 +196,161 @@ header h1{
 }
 
 .content-right .nav-rapida a{
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-.content-right h3{
+.content-right{
     background-color: #F0F0F0;
     color: #565656;
     padding: 5px;
 }
 
+.content-right h3{
+    margin-top: 4px;
+    margin-right: 25px;
+    float: right;
+}
+
+.content-right div{
+    background-color: #F0F0F0;
+    margin-bottom: 15px;
+}
+
+.content-right .icon-social{
+    width: 15%;
+    height: auto;
+}
+
+/* FORM */
+
+.content-text form{
+    text-align: center;
+}
+
+.content-text form label{
+    padding: 10px;
+}
+
+.content-text form input, .content-text form textarea{
+    margin: 5px;
+    padding: 10px;
+    width: 300px;
+    border-radius: 20px;
+    border-color: #AE56E6;
+}
+
+.content-text form input:focus, .content-text form textarea:focus{
+    border-width: 3px;
+    background-color: #F0F0F0;
+    outline: none;
+} 
+
+.content-text form textarea{
+    width: 650px;
+    height: auto;
+}
+
+.content-text form input[type=submit]{
+    margin-top: 35px;
+    padding: 10px 25px;
+    background-color: #AE56E6;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-color: black;
+    border-width: 2px;
+}
+
+.content-text form input[type=submit]:hover{
+    background-color: #803fa8;
+}
+
 /* LINKS */
 a{
-    color: #00A393;
+    color: #AE56E6;
     text-decoration: none;
 }
 
 a:hover{
     text-decoration: underline;
+}
+
+.volta-topo{
+    position: fixed;
+    right: 1%;
+    bottom: 100px;
+}
+
+#botao-volta{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#volta-img{
+    width: 100%;
+    height: 100%;
+    max-width: 60px;
+    border: none;
+    max-height: 60px;
+}
+
+#volta-img:hover{
+    transform: scale(1.5,1.5);
+}
+
+/* MODAL */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.content .content-text div .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer{
+    background-color: #002e62;
+    color: white;
+    width: 100%;
+    height: 40px;
+}
+
+footer p{
+    padding-top: 10px;
+    margin:auto;
+    text-align: center;
 }

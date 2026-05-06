@@ -5,64 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio WEB</title>
 
-    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/style.css">    
+    <script src="Js/script.js"></script>
 </head>
-<body>
+<body id="topo" onscroll="desceu()">
     <header>
         <div class="header-content">
-            <h1>Portfolio WEB 2026</h1>
-            <h1>VITOR MESSAGI GUATIMOSIM</h1>
-        </div>
-
-    </header>
-
-    <div class="content">
-        <div class="content-text"> 
-            <h1>Sobre Mim</h1>        
-            <div>
-                <br><h3>Dados Gerais</h3>
+            <div class="navbar">
                 <ul>
-                    <li><p>Nome: Vitor Messagi Guatimosim</p></li>
-                    <li><p>E-mail: vitor.messagi@gmail.com</p></li>
-                    <li><p>Data Nasc.: 03/03/2002</p></li>
-                    <li><p>Fone: (51) 99510-6115</p></li>
-                    <li><p>Habilitação: B</p></li>
-                    <li><p><a href="https://www.linkedin.com/in/vitor-messagi-guatimosim/" target="_blank">Perfil no Linkedin</a></p></li>
+                    <li class="dropdown">
+                        <a href="index.html">Página Inicial</a>
+                        <div class="dropdown-content">
+                            <a href="index.html#sobre-mim-text">Sobre Mim</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="formacao.html">Formação</a>
+                        <div class="dropdown-content">
+                            <a href="formacao.html#formacao-text">Formação Acadêmica</a>
+                            <a href="formacao.html#conhecimentos-text">Conhecimentos</a>
+                            <a href="formacao.html#curso-extra-text">Cursos Extras</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="portfolio.html">Portfólio</a>
+                        <div class="dropdown-content">
+                            <a href="portfolio.html#web-text">Desenvolvimento WEB</a>
+                            <a href="portfolio.html#arduino-text">Arduino</a>
+                            <a href="portfolio.html#java-text">Desenvolvimento Java</a>
+                            <a href="portfolio.html#python-text">Desenvolvimento Pyhton</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="contato.html">Contato</a>
+                        <div class="dropdown-content">
+                            <a href="contato.html#form-text">Mande Mensagem</a>
+                        </div>
+                    </li>
                 </ul>
-
-                <br><h3>Apresentação</h3>
-                <p>
-                    Olá!! Sou Vitor Messagi Guatimosim, tenho 24 anos e gosto muito da área de tecnologia. Sigo sempre estudando e procurando coisas novas na area para aprender, estudo tecnologia/informática a 10 anos.
-                    <br>Já trabalhei com alguns setores da area, fiz estágio no setor de suporte técnico da CEEE-D em Osório RS durante 1 ano, 
-                    onde arrumava computadores e maquinas em geral e fazia manutenção de sistemas e servidores.
-                    <br> Como Desenvolvedor TI Junior na empressa Gauss Geotecnologia durante 4 meses, cuidando das páginas web da empresa e de alguns sistemas utilizados pela mesma.
-                    <br>Atualmente sou APP(Controlador de Estoque) na empresa Supermercados Dalpiaz LTDA.
-
-                    <br><br>
-                    Tenho uma grande paixão pela tecnologia e por isso estudei varias linguagens de desenvolvimento e sempre procurei temas diversos pois sempre tive um interesse.
-                    Graças a isso sou formado em dois cursos técnicos(Técnico em Informática pelo IFRS-Osório e Técnico em Desenvolvimento de Sistemas pelo SENAC-RS) e 
-                    atualmente estou realizando a graduação em Ciências da Computação (UNINTER).
-                </p>
             </div>
         </div>
+    </header>
 
-        <div class="content-right">
-            <div class="nav-rapida">
-                <h3>Navegação Rápida</h3>
-                <a href="index.html">Página Inicial</a><br>
-                <a href="formacao.html">Formação</a><br>
-                <a href="portfolio.html">Portfólio</a><br>
-                <a href="contato.html">Contato</a><br>
-            </div>            
-        </div> 
-        
-        <div class="content-right">
-            <div class="nav-rapida">
-                <h3>Links de Contato</h3>
-                <a href="https://github.com/VitorGuatimosim">GitHub</a><br>
-                <a href="https://www.linkedin.com/in/vitor-messagi-guatimosim/">Linkedin</a><br>
-            </div>            
+    <div class="volta-topo">
+        <a href="#topo" id="botao-volta"><img src="Images/Icons/seta-semfundo.png" title="Voltar ao Topo" id="volta-img"></a>
+    </div>
+
+    <div class="page-wrapper">
+        <div class="content">
+            <div class="content-text"> 
+                <h1>Sobre Mim</h1>        
+                <div>
+                    <br><h3>Dados Gerais</h3>
+                    <ul>
+                        <li><p>Nome: Vitor Messagi Guatimosim</p></li>
+                        <li><p>E-mail: vitor.messagi@gmail.com</p></li>
+                        <li><p>Data Nasc.: 03/03/2002</p></li>
+                        <li><p>Fone: (51) 99510-6115</p></li>
+                        <li><p>Habilitação: B</p></li>
+                        <li><p><a href="https://www.linkedin.com/in/vitor-messagi-guatimosim/" target="_blank">Perfil no Linkedin</a></p></li>
+                    </ul>
+
+                    <br><h3 id="sobre-mim-text">Apresentação</h3>
+                    <p>
+                        Olá!! Sou Vitor Messagi Guatimosim, tenho 24 anos e gosto muito da área de tecnologia. Sigo sempre estudando e procurando coisas novas na area para aprender, estudo tecnologia/informática a 10 anos.
+                        <br>Já trabalhei com alguns setores da area, fiz estágio no setor de suporte técnico da CEEE-D em Osório RS durante 1 ano, 
+                        onde arrumava computadores e maquinas em geral e fazia manutenção de sistemas e servidores.
+                        <br> Como Desenvolvedor TI Junior na empressa Gauss Geotecnologia durante 4 meses, cuidando das páginas web da empresa e de alguns sistemas utilizados pela mesma.
+                        <br>Atualmente sou APP(Controlador de Estoque) na empresa Supermercados Dalpiaz LTDA.
+
+                        <br><br>
+                        Tenho uma grande paixão pela tecnologia e por isso estudei varias linguagens de desenvolvimento e sempre procurei temas diversos pois sempre tive um interesse.
+                        Graças a isso sou formado em dois cursos técnicos(Técnico em Informática pelo IFRS-Osório e Técnico em Desenvolvimento de Sistemas pelo SENAC-RS) e 
+                        atualmente estou realizando a graduação em Ciências da Computação (UNINTER).
+                    </p>
+                </div>
+            </div>
+
+            <div class="content-right">
+                <div class="nav-rapida">
+                    <div><img src="Images/Icons/icon-navegacao.gif" class="icon-social"><h3>Navegação Rápida</h3></div>
+                    <a href="index.html">Página Inicial</a><br>
+                    <a href="formacao.html">Formação</a><br>
+                    <a href="portfolio.html">Portfólio</a><br>
+                    <a href="contato.html">Contato</a><br>
+                </div>            
+            </div> 
+            
+            <div class="content-right">
+                <div class="nav-rapida">                    
+                    <div><img src="Images/Icons/social-media.gif" class="icon-social"> <h3>Links de Contato</h3> </div>
+                    <a href="https://github.com/VitorGuatimosim">GitHub</a><br>
+                    <a href="https://www.linkedin.com/in/vitor-messagi-guatimosim/">Linkedin</a><br>
+                </div>            
+            </div>
         </div>
-    </div>    
+    </div>
+        
+    <footer>
+        <p>&copy; VITOR MESSAGI GUATIMOSIM - 2026</p>
+    </footer>
 </body>
 </html>

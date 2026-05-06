@@ -6,54 +6,108 @@
     <title>Portfolio WEB</title>
 
     <link rel="stylesheet" href="Css/style.css">
+    <script src="Js/script.js"></script>
+
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h1>Portfolio WEB 2026</h1>
-            <h1>VITOR MESSAGI GUATIMOSIM</h1>
-        </div>
-
-    </header>
-
-    <div class="content">
-        <div class="content-text">
-            <h1>Contato</h1>
-            <div>
-                <h3>Formulário</h3>
-                <form>
-                    <label for="nome">Nome: </label><br>
-                    <input type="text" id="nome" name="nome"><br>
-                    
-                    <label for="email">E-mail: </label><br>
-                    <input type="email" id="email" name="email"><br>
-                    
-                    <label for="mensagem">Mensagem: </label><br>
-                    <textarea type="text" name="mensagem" rows="5" cols="80"></textarea><br>
-                    
-
-                    <input type="submit" value="Submit">
-                </form>
+            <div class="navbar">
+                <ul>
+                    <li class="dropdown">
+                        <a href="index.html">Página Inicial</a>
+                        <div class="dropdown-content">
+                            <a href="index.html#sobre-mim-text">Sobre Mim</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="formacao.html">Formação</a>
+                        <div class="dropdown-content">
+                            <a href="formacao.html#formacao-text">Formação Acadêmica</a>
+                            <a href="formacao.html#conhecimentos-text">Conhecimentos</a>
+                            <a href="formacao.html#curso-extra-text">Cursos Extras</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="portfolio.html">Portfólio</a>
+                        <div class="dropdown-content">
+                            <a href="portfolio.html#web-text">Desenvolvimento WEB</a>
+                            <a href="portfolio.html#arduino-text">Arduino</a>
+                            <a href="portfolio.html#java-text">Desenvolvimento Java</a>
+                            <a href="portfolio.html#python-text">Desenvolvimento Pyhton</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="contato.html">Contato</a>
+                        <div class="dropdown-content">
+                            <a href="contato.html#form-text">Mande Mensagem</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
+    </header>
 
-        <div class="content-right">
-            <div class="nav-rapida">
-                <h3>Navegação Rápida</h3>
-                <a href="index.html">Página Inicial</a><br>
-                <a href="formacao.html">Formação</a><br>
-                <a href="portfolio.html">Portfólio</a><br>
-                <a href="contato.html">Contato</a><br>
-            </div>            
-        </div>
+    <div class="volta-topo">
+        <a href="#topo" id="botao-volta"><img src="Images/Icons/seta-semfundo.png" title="Voltar ao Topo" id="volta-img"></a>
+    </div>
 
-        <div class="content-right">
-            <div class="nav-rapida">
-                <h3>Links de Contato</h3>
-                <a href="https://github.com/VitorGuatimosim">GitHub</a><br>
-                <a href="https://www.linkedin.com/in/vitor-messagi-guatimosim/">Linkedin</a><br>
-            </div>            
+    <div class="page-wrapper">
+        <div class="content">
+            <div class="content-text">
+                <h1>Contato</h1>
+                <div>
+                    <br><h2 id="form-text">Formulário</h2>
+                    <form>
+                        <label for="nome">NOME
+                            <input type="text" id="nome" name="nome" placeholder="Nome" REQUIRED>
+                        </label><br><br>                        
+                        
+                        <label for="email">E-MAIL
+                            <input type="email" id="email" name="email" placeholder="E-mail" REQUIRED>
+                        </label><br><br>                        
+                        
+                        <label for="mensagem">MENSAGEM
+                            <textarea type="text" id="mensagem" name="mensagem" rows="5" cols="80" placeholder="Escreva aqui sua mensagem!!" REQUIRED></textarea>
+                        </label>                        
+                        <br>                                               
+
+                        <!-- <input type="submit" value="ENVIAR"> -->
+                        <button id="myBtn" onclick="enviarMensagem()">Open Modal</button>
+                    </form>
+
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="fecharModal()">&times;</span>
+                            <p>Some text in the Modal..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-right">
+                <div class="nav-rapida">
+                    <div><img src="Images/Icons/icon-navegacao.gif" class="icon-social"><h3>Navegação Rápida</h3></div>
+                    <a href="index.html">Página Inicial</a><br>
+                    <a href="formacao.html">Formação</a><br>
+                    <a href="portfolio.html">Portfólio</a><br>
+                    <a href="contato.html">Contato</a><br>
+                </div>            
+            </div>
+
+            <div class="content-right">
+                <div class="nav-rapida">
+                    <div><img src="Images/Icons/social-media.gif" class="icon-social"><h3>Links de Contato</h3></div>
+                    <a href="https://github.com/VitorGuatimosim">GitHub</a><br>
+                    <a href="https://www.linkedin.com/in/vitor-messagi-guatimosim/">Linkedin</a><br>
+                </div>            
+            </div>
         </div>
-    </div>    
+    </div>
+
+    <footer>
+        <p>&copy; VITOR MESSAGI GUATIMOSIM - 2026</p>
+    </footer>
+
 </body>
 </html>
