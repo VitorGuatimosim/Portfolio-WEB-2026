@@ -9,7 +9,7 @@
     <script src="Js/script.js"></script>
 
 </head>
-<body>
+<body id="topo" onscroll="desceu()">
     <header>
         <div class="header-content">
             <div class="navbar">
@@ -65,11 +65,11 @@
                         
                         <label for="email">E-MAIL
                             <input type="email" id="email" name="email" placeholder="E-mail" REQUIRED>
-                        </label><br><br>                        
-                        
-                        <label for="mensagem">MENSAGEM
+                        </label><br><br>
+
+                        <label for="mensagem">MENSAGEM</label> <br>
                             <textarea type="text" id="mensagem" name="mensagem" rows="5" cols="80" placeholder="Escreva aqui sua mensagem!!" REQUIRED></textarea>
-                        </label>                        
+                                               
                         <br>                                               
 
                         <button title="Enviar">ENVIAR</button>
@@ -78,11 +78,11 @@
                     <div id="modal-form" class="modal">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <span class="close" onclick="fecharModal()" title="Fechar">&times;</span>
+                                <span class="btn-fechar" onclick="fecharModal()" title="Fechar">&times;</span>
                                 <h2>MENSAGEM ENVIADA</h2>
                             </div>
                             <div class="modal-body">
-                                <p>Sua mensagem foi enviada com sucesso!!!!</p>
+                                <p>Sua mensagem foi enviada com sucesso!</p>
                             </div>
                         </div>
                     </div>
@@ -91,19 +91,17 @@
 
             <div class="content-right">
                 <div class="nav-rapida">
-                    <div><img src="Images/Icons/icon-navegacao.gif" class="icon-social"><h3>Navegação Rápida</h3></div>
+                    <div class="titulo-nav"><img src="Images/Icons/icon-navegacao.gif" class="icon-social"><h3>Navegação Rápida</h3></div>
                     <a href="index.html">Página Inicial</a><br>
                     <a href="formacao.html">Formação</a><br>
                     <a href="portfolio.html">Portfólio</a><br>
                     <a href="contato.html">Contato</a><br>
                 </div>            
-            </div>
 
-            <div class="content-right">
                 <div class="nav-rapida">
-                    <div><img src="Images/Icons/social-media.gif" class="icon-social"><h3>Links de Contato</h3></div>
-                    <a href="https://github.com/VitorGuatimosim">GitHub</a><br>
-                    <a href="https://www.linkedin.com/in/vitor-messagi-guatimosim/">Linkedin</a><br>
+                    <div class="titulo-nav"><img src="Images/Icons/social-media.gif" class="icon-social"><h3>Links de Contato</h3></div>
+                    <a href="https://github.com/VitorGuatimosim" target="_blank">GitHub</a><br>
+                    <a href="https://www.linkedin.com/in/vitor-messagi-guatimosim/" target="_blank">Linkedin</a><br>
                 </div>            
             </div>
         </div>

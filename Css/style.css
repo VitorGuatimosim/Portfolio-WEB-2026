@@ -9,28 +9,10 @@
 
 /* GENERICOS */
 
-/*
-CORES 
-PRIMARIA : #6200EE
-PRIMARIA-VARIANTE: #3700B3
-SECUNDARIA: #03DAC5
-TEXTO LINKS: #00A393
-
-NOVO
-BACKGROUND-COLOR FOOTER: #002E62
-NAVBAR COLOR: #AE56E6
-TEXTO LINKS: #AE56E6
-*/
-
 html, body{
     font-size: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #F0F0F0;
-}
-
-.content-text .img-legenda .legenda{
-    font-size: 13px;
-    text-align: center;
 }
 
 h3{
@@ -41,6 +23,7 @@ h3{
 
 header{
     background: no-repeat center/100% url("../Images/header-computação.png");
+    background-size: cover;
     width: 100%;
     height: 600px;
     position: relative;
@@ -132,19 +115,20 @@ header .header-content h1{
 
 .content{
     margin: 0 auto;
-    width: 1150px; 
+    width: 100%; 
     overflow: auto;
 }
 
 .content-text{
-    width: 785px;
+    width: 60%;
     float: left;
     background-color: #FFFFFF;
     text-align: justify;
     padding: 15px;
     line-height: 1.6;
     padding-bottom:50px;
-    margin: 20px 0;    
+    margin: 30px 3.6%;
+    margin-left: 10%;
 }
 
 .content-text img{
@@ -159,6 +143,11 @@ header .header-content h1{
     margin: 25px 0 50px;
 }
 
+.content-text .img-legenda .legenda{
+    font-size: 13px;
+    text-align: center;
+}
+
 .content-text p{
     margin: 0 5px;
     text-align: justify;
@@ -166,9 +155,6 @@ header .header-content h1{
 
 .content-text h1{
     text-align: center;
-}
-
-.content-text h1{
     border-bottom: 1px solid #C4C4C4;
 }
 
@@ -184,14 +170,16 @@ header .header-content h1{
 /* RIGHT SIDE */
 
 .content-right{
-    width: 245px;
+    width: 21%;
     float: right;
-    margin-top: 20px;    
+    margin-top: 25px;
+    margin-right: 3.6%;
+    padding: 5px;   
 }
 
 .content-right .nav-rapida{
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     background-color: #FFFFFF;
 }
 
@@ -199,28 +187,25 @@ header .header-content h1{
     line-height: 1.5;
 }
 
-.content-right{
-    background-color: #F0F0F0;
-    color: #565656;
-    padding: 5px;
-}
-
-.content-right h3{
+.content-right .nav-rapida .titulo-nav h3{
     margin-top: 4px;
-    margin-left: 40px;
 }
 
-.content-right div{
+.content-right .nav-rapida .titulo-nav{
     background-color: #F0F0F0;
     margin-bottom: 15px;
     padding: 1px 0;
-    width: auto;
 }
 
-.content-right .icon-social{
-    width: 15%;
+.content-right .nav-rapida .titulo-nav .icon-social{
+    width: 10%;
     height: auto;
     float: left;
+}
+
+.content-right .nav-rapida .titulo-nav img{
+    width: 100%;
+    height: auto;
 }
 
 /* FORM */
@@ -236,7 +221,8 @@ header .header-content h1{
 .content-text form input, .content-text form textarea{
     margin: 5px;
     padding: 10px;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     border-radius: 20px;
     border-color: #AE56E6;
 }
@@ -248,13 +234,14 @@ header .header-content h1{
 } 
 
 .content-text form textarea{
-    width: 650px;
+    max-width: 650px;
+    width: 100%;
     height: auto;
 }
 
 .content-text form button{
     margin-top: 35px;
-    padding: 10px 25px;
+    padding: 10px 50px;
     background-color: #AE56E6;
     color: #FFFFFF;
     font-size: 15px;
@@ -262,9 +249,10 @@ header .header-content h1{
     cursor: pointer;
     border-color: black;
     border-width: 2px;
+    border-radius: 20px;
 }
 
-.content-text form input[type=submit]:hover{
+.content-text form button:hover{
     background-color: #803fa8;
 }
 
@@ -281,7 +269,7 @@ a:hover{
 .volta-topo{
     position: fixed;
     right: 1%;
-    bottom: 100px;
+    bottom: 50px;
 }
 
 #botao-volta{
@@ -313,14 +301,11 @@ a:hover{
     overflow: auto;
     width: 100%;
     height: 100%;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-
-/* ANIMAÇÃO */
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
+    animation-name: ani-descida;
+    animation-duration: 0.4s;
+    animation-name: ani-fundo;
+    animation-duration: 0.2s;
+    background-color: rgba(0,0,0,0.5);
 }
 
 .modal-content {
@@ -349,7 +334,7 @@ a:hover{
     padding: 16px 15px;
 }
 
-.close {
+.btn-fechar {
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -357,10 +342,23 @@ a:hover{
   margin: 0px 5px;
 }
 
-.close:hover, .close:focus {
+.btn-fechar:hover, .btn-fechar:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* ANIMAÇÃO */
+
+/* Animação do Modal aparecendo na tela ao enviar a mensagem*/
+@keyframes ani-descida {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+/* Animação do fundo da tela escurecendo focando apenas no modal*/
+@keyframes ani-fundo{
+    from{background-color: rgba(0,0,0,0);}
+    to{background-color: rgba(0,0,0,0.5);}
 }
 
 /* FOOTER */
@@ -376,4 +374,21 @@ footer p{
     padding-top: 10px;
     margin:auto;
     text-align: center;
+}
+
+/* AJUSTE PARA TELAS MENORES*/
+
+@media screen and (max-width: 800px){
+    .content-right .nav-rapida .titulo-nav .icon-social{
+        width: 20%;
+    }
+    
+    .content-right .nav-rapida .titulo-nav h3{
+        font-size: 12pt;
+    }
+
+    .content-right .nav-rapida a{
+        font-size: 10pt;
+    }
+
 }

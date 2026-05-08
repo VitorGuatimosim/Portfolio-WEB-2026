@@ -1,3 +1,5 @@
+
+/* Função que faz as verificações do formulário de envio de mensagem*/
 function enviarMensagem(){
     let campoNome = document.getElementById("nome").value;
     if(campoNome != ""){
@@ -5,16 +7,18 @@ function enviarMensagem(){
         if(campoEmail != ""){
             let campoMensagem = document.getElementById("mensagem").value;
             if(campoMensagem != ""){
+
+                /* Após as verificações exibe o modal de aviso e limpa o formulário*/
                 abrirModal();
                 document.getElementById("nome").value = "";
                 document.getElementById("email").value = "";
                 document.getElementById("mensagem").value = "";
 
-                // ADICIONA UM EVENTO QUE ESPERA O CLIQUE FORA DO MODAL PARA FECHA-LO
+                /* Adiciona o listener para que o modal feche ao ser clicado em qualquer lugar da tela */
                 window.addEventListener("click", 
                     function(event){
                         if(event.target == document.getElementById("modal-form")){
-                            document.getElementById("modal-form").style.display = "none";
+                            fecharModal();
                         }
                     }, false)
             }
@@ -30,15 +34,17 @@ function fecharModal(){
     document.getElementById("modal-form").style.display = "none";
 }
 
+/* Função para esconder o botão que volta rapidamente ao topo da tela */
 function esconde(){
     if(hide){
         botao.style.visibility = 'hidden';
     }
 }
 
+
+/* Essa função controla a descida (scroll) para exibir/esconder o botão de voltar rapidamente ao topo*/
 function desceu(){
     let botao = window.document.getElementById("botao-volta");
-    
     let hide = true;
 
     if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
@@ -53,8 +59,7 @@ function desceu(){
         botao.style.cursor = 'auto';
         hide = true;
         window.setTimeout(esconde, 300);
-        
-        // BASICAMENTE É PRA O CODIGO DENTRO DO TIMEOUT ESPERAR UM TEMPO PARA SER ACIONADO
-        // ELE TAVA SUMINDO ANTES DA TRANSIÇÃO, POR ISSO O TEMPO DE ESPERA
+        /* Uma função de espera para gerar uma transição ao esconder o botão para que ele suma suavemente*/
+
     }
 }
