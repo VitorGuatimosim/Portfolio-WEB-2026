@@ -40,7 +40,7 @@
                     <li class="dropdown">
                         <a href="contato.html">Contato</a>
                         <div class="dropdown-content">
-                            <a href="contato.html#form-text">Mande Mensagem</a>
+                            <a href="contato.html#form-text">Entre em Contato</a>
                         </div>
                     </li>
                 </ul>
@@ -52,13 +52,13 @@
         <a href="#topo" id="botao-volta"><img src="Images/Icons/seta-semfundo.png" title="Voltar ao Topo" id="volta-img"></a>
     </div>
 
-    <div class="page-wrapper">
+    <div id="teste" class="page-wrapper">
         <div class="content">
             <div class="content-text">
                 <h1>Contato</h1>
                 <div>
                     <br><h2 id="form-text">Formulário</h2>
-                    <form>
+                    <form action="#" method="POST" onsubmit="enviarMensagem(); return false">
                         <label for="nome">NOME
                             <input type="text" id="nome" name="nome" placeholder="Nome" REQUIRED>
                         </label><br><br>                        
@@ -72,14 +72,18 @@
                         </label>                        
                         <br>                                               
 
-                        <!-- <input type="submit" value="ENVIAR"> -->
-                        <button id="myBtn" onclick="enviarMensagem()">Open Modal</button>
+                        <button title="Enviar">ENVIAR</button>
                     </form>
 
-                    <div id="myModal" class="modal">
+                    <div id="modal-form" class="modal">
                         <div class="modal-content">
-                            <span class="close" onclick="fecharModal()">&times;</span>
-                            <p>Some text in the Modal..</p>
+                            <div class="modal-header">
+                                <span class="close" onclick="fecharModal()" title="Fechar">&times;</span>
+                                <h2>MENSAGEM ENVIADA</h2>
+                            </div>
+                            <div class="modal-body">
+                                <p>Sua mensagem foi enviada com sucesso!!!!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
